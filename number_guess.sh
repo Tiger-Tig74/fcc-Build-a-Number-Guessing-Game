@@ -62,7 +62,6 @@ while true; do
   elif [ "$guess" -gt "$secret_number" ]; then
     echo "It's lower than that, guess again:"
   else
-    echo "You guessed it in $number_of_guesses tries. The secret number was $secret_number. Nice job!"
     break
   fi
 done
@@ -74,3 +73,5 @@ fi
 
 # update user data
 update_user_data "$username" "$games_played" "$best_game"
+
+echo "You guessed it in $number_of_guesses tries. The secret number was $secret_number. Nice job!"
